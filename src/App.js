@@ -7,7 +7,8 @@ import Home from "./Home";
 import Posts from "./Posts";
 import Profile from './Profile';
 import Context from './Context';
-import Chat from './Chat';
+import Blog from './Blog';
+import Movies from './Movies';
 
 // export const contextValue = createContext()
 
@@ -46,14 +47,15 @@ const App = () => {
     <>
       <div className="header">
         <div className="title">
-          <h1>ChatBook</h1>
+          <h1><Link to="/">HorrorBook</Link></h1>
           <p>Welcome {name}</p>
         </div>
         <div className="nav-panel">
           <Link to="/">Home</Link>
-          <Link to="/posts">Posts</Link>
-            <Link to="/chat">Chats</Link>
-          <Link to="/profile"><div className="login-button">
+          <Link to="/movies">Movies</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/profile">Profile</Link>
+          <Link to="/"><div className="login-button">
             {showloginButton ?
               <GoogleLogin
                 clientId={clientId}
@@ -76,12 +78,12 @@ const App = () => {
           </Link>
         </div>
       </div>
-      <Context.Provider value={{google: id, gname: name, gimg: imgs}}>
+      <Context.Provider value={{ google: id, gname: name, gimg: imgs }}>
         <Switch>
           <Route exact path="/" component={Home}></Route>
-          <Route exact path="/posts" component={Posts}></Route>
+          <Route exact path="/movies" component={Movies}></Route>
           <Route exact path="/profile" component={Profile}></Route>
-          <Route exact path="/chat" component={Chat}></Route>
+          <Route exact path="/blog" component={Blog}></Route>
         </Switch>
       </Context.Provider>
     </>
