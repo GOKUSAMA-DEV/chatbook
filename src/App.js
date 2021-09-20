@@ -4,7 +4,6 @@ import { Route, Switch, Link } from 'react-router-dom';
 import "./App.css";
 // import Header from "./Header";
 import Home from "./Home";
-import Posts from "./Posts";
 import Profile from './Profile';
 import Context from './Context';
 import Blog from './Blog';

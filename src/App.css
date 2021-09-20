@@ -42,12 +42,14 @@
     position: absolute;
     z-index: -1;
  } */
-.home-popo{
+
+.home-popo {
     height: auto;
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 .parent-home {
     height: auto;
     width: 30%;
@@ -66,19 +68,24 @@
     margin-top: 15px;
     box-shadow: 5px 5px 20px grey;
 }
-.card-header{
+
+.card-header {
     height: auto;
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.card-user-img{
+
+.card-user-img {
     height: auto;
     width: 15%;
+    display: flex;
+    align-items: center;
     padding: 5px 7px;
 }
-.card-user-img img{
+
+.card-user-img img {
     border-radius: 50%;
     border: 2px solid grey;
 }
@@ -87,15 +94,17 @@
     height: auto;
     width: 100%;
     /* border-radius: 15px; */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-.card-panel{
+
+.card-panel {
     height: auto;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.card-panel button{
+
+.card-panel button {
     border-radius: 5px;
     border: none;
     cursor: pointer;
@@ -103,11 +112,13 @@
     padding: 5px 10px;
     box-shadow: 5px 5px 20px grey;
 }
-.card-panel button:hover{
+
+.card-panel button:hover {
     background-color: black;
     color: whitesmoke;
 }
-.post-parent{
+
+.post-parent {
     height: auto;
     width: 30%;
     justify-content: center;
@@ -118,7 +129,8 @@
     line-height: 40px;
     border: 1px solid black;
 }
-input{
+
+input {
     height: auto;
     width: 100%;
     padding: 5px 20px;
@@ -126,24 +138,28 @@ input{
     outline: none;
     font-size: 17px;
 }
-.post-image{
+
+.post-image {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.fa{
+
+.fa {
     font-size: 25px;
     color: palevioletred;
     border-radius: 50%;
     border: 2px solid;
     padding: 5px 7.5px;
 }
-.fa:hover{
+
+.fa:hover {
     background-color: black;
     color: white;
 }
-.post-button button{
+
+.post-button button {
     border-radius: 5px;
     border: none;
     cursor: pointer;
@@ -154,11 +170,13 @@ input{
     padding: 5px 10px;
     box-shadow: 5px 5px 20px grey;
 }
-.post-button button:hover{
+
+.post-button button:hover {
     background-color: white;
-    color: black;  
+    color: black;
 }
-.input-line{
+
+.input-line {
     height: auto;
     width: 100%;
     display: flex;
@@ -166,32 +184,69 @@ input{
     align-items: center;
 }
 
-.input-title{
+.input-title {
     height: auto;
-    width: 70%;   
+    width: 70%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
-.card-user-imgs{
+.input-title .desc{
+    height: 100px;
+    width: 100%;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+
+.card-user-imgs {
     height: auto;
     width: 15%;
 }
-.card-user-imgs img{
+
+.card-user-imgs img {
     width: 100%;
     border-radius: 50%;
     border: 1px solid grey;
     box-shadow: 5px 5px 20px grey;
 }
-.display-img{
-    height: auto;
-    width: 15%;
+
+.display-img {
+    height: 30%;
+    width: 100%;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2px 5px;
+    padding: 2%
 }
-.display-img img{
+
+.display-img img {
     width: 100%;
     border: 1px solid grey;
-    border-style:dashed;
+    border-style: dashed;
+    opacity: 0.7;
+    /* padding: 4px; */
 }
-h2{
+.delete_button{
+    background: transparent;
+    border: none;
+    margin-left: 62px;
+    /* color: grey; */
+}
+
+.delete_button .fa{
+    color: black;
+    font-size: 15px;
+    border: none;
+}
+.delete_button .fa:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+h2 {
     height: auto;
     width: 50%;
     background-color: lightseagreen;
@@ -200,4 +255,23 @@ h2{
     margin-top: 20px;
     color: white;
     padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-title {
+    height: auto;
+    width: 100%;
+    padding: 5px 20px;
+    font-size: 18px;
+}
+
+.card-title p {
+    font-weight: 600;
+}
+
+.card-description {
+    height: auto;
+    width: 100%;
+    padding: 5px 25px;
+    font-size: 15px;
 }

@@ -23,6 +23,13 @@ const Home = () => {
                     setDels(element.id);
                 });
             })
+            db.collection(`${id} link`).get().then((querySnapshot) => {
+                querySnapshot.forEach(element => {
+                    var data = element.data();
+                    setInfo(arr => [...arr, data]);
+                    setDels(element.id);
+                });
+            })
         }
         else {
             console.log("Failed")
@@ -59,8 +66,14 @@ const Home = () => {
                                         </div>
                                     </div>
 
-                                    <img src={data.imgUrl} alt="img" />
+                                    <div className="card-title">
+                                        <p>{data.title}</p>
+                                    </div>
 
+                                    <img src={data.imgUrl} alt="img" />
+                                    <div className="card-description">
+                                        <p>{data.thoughts}</p>
+                                    </div>
                                     <div className="card-panel">
                                         <button onClick={del}>Delete</button>
                                     </div>
